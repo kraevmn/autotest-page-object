@@ -1,2 +1,2 @@
-# autotest-page-onject
+# autotest-page-object
 Полноценный тестовый проект, финальное задание
