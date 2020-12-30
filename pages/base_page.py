@@ -8,7 +8,7 @@ from .locators import BasePageLocators
 from .locators import BasketPageLocators
 
 class BasePage():
-    def __init__(self, browser, url, timeout=4):
+    def __init__(self, browser, url, timeout=10):
         self.browser = browser
         self.url = url
         self.browser.implicitly_wait(timeout)
@@ -62,3 +62,7 @@ class BasePage():
     def go_to_basket_page(self):
         link = self.browser.find_element(*BasketPageLocators.BASKET_LINK)
         link.click()
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                 " probably unauthorised user"

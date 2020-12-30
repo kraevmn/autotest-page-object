@@ -10,4 +10,4 @@ class BasketPage(BasePage):
         messages1 = self.browser.find_element(*BasketPageLocators.EMPTY_BASKET)
         messages1 = messages1.text
 #        print(f"Text: {messages1}")
-        assert messages1 == 'Ваша корзина пуста Продолжить покупки', "Ваша корзина не пуста!"
+        assert messages1 == 'Your basket is empty. Continue shopping', "Ваша корзина не пуста!"
